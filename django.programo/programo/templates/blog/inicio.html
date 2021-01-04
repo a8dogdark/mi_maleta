@@ -1,0 +1,45 @@
+{% extends '../layout/frontend.html' %}
+{% block title %}BLOG{% endblock %}
+{% block contenido %}
+{% load static %}
+<!-- acordion -->
+
+<!-- fin acordion -->
+
+<div class="container">
+
+    <h1>BLOG - {{ datos.count }} registros encontrados</h1>
+    <hr />
+    <p>
+      <a class="btn btn-success" href="">Crear</a>
+    </p>
+    <hr />
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Categoría</th>
+          <th>Titulo</th>
+          <th>Detalle</th>
+          <th>Fecha</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for dato in datos %} 
+          <tr>
+            <td>{{ dato.id }}</td>
+            <td>{{dato.categorias.nombre}}</td>
+            <td>{{dato.nombre}}</td>
+            <td>{{dato.detalle}}</td>
+            <td>{{dato.fecha}}</td>
+            <td>
+              xx
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    
+</div>
+{% endblock %}
