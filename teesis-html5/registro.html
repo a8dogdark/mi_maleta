@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Registro de usuarios" />
+    <meta name="author" content="Sergio Marchant" />
+    <meta name="copyright" content="Sergio Marchant by Dogdark" />
+    <meta name="robots" content="nofollow" />
+
+    <!-- Hojas de estilos anexas -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="dist/css/estilo.css" />
+
+    <!-- favion del sitio -->
+    <link rel="shorcut icon" href="dist/imagenes/icon_1.svg">
+    <title>Registro de Usuarios</title>
+  </head>
+  <body>
+    <!-- menu de navegacion responsive -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-orange bg-orange">
+        <!-- logo y texto de la web -->
+        <a class="navbar-brand" href="index.html">
+          <img src="dist/imagenes/logo.png" width="50" height="50" alt="" id="imglogo">OYE
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#MenuPrincipal" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- fin logo y texto de la web -->
+
+
+        <div id="MenuPrincipal" class="collapse navbar-collapse">
+          <!-- menu con redireciones a otras secciones -->
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="canciones.html">Canciones</a>
+            </li>
+          </ul>
+          <!-- fin menu con redireciones a otras secciones -->
+
+          <div class="form-inline">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <!-- boton de contacto que desplega una ventana modal con los datos -->
+                <button type="button" class="btn btn-primary nav-link mb-1 mr-lg-2 px-4" data-toggle="modal" data-target="#ventanacontacto">Contacto</button>
+
+                <!-- ventana modal con los datos de contacto  -->
+                <div class="modal" tabindex="-1" role="dialog" id="ventanacontacto">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Contactame</h5>
+                        <button type="button" class="close" data-dismiss="modal">X</button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Si necesitas contactar con nuestro equipo, lo puedes realizar a través de nuestros canales.</p>
+                        <p>Email : info@oye.com</p>
+                        <p class="text-primary">Fono : +1 123 123123123</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="bt btn-primary" data-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- fin ventana modal -->
+              </li>
+              <li class="nav-item">
+                <a href="session.html" class="nav-link btn btn-primary mb-1 mr-lg-2 px-4">Inicio Session</a>
+              </li>
+              <li class="nav-item">
+                <a href="registro.html" class="nav-link btn btn-primary mr-lg-2 px-4">Registro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    <!-- fin menu de navegacion responsive -->
+
+    <!-- seccion formulario de registro de usuarios  -->
+    <section class="my-4">
+      <div class="container">
+        
+        <div class="row bg-light rounded p-3">
+          <!-- imagen y texto izquierdo -->
+          <div class="d-none d-md-block col-lg-6">
+            <h3>Participa con nosotros</h3>
+            <hr>
+            <p class="text-justify">Disfruta de la mejor música que puedes encontrar en todo el mundo, solo dale play y escucha.</p>
+            <p class="text-justify">Regístrate con nosotros y accede a las secciones donde podrás subir tu propia música y compartirlas en redes sociales para que conozcan tus producciones.</p>
+            <hr>
+            <img src="dist/imagenes/portada.jpeg" width="100%" height="auto">
+            <hr>
+          </div>
+          <!-- fin imagen y texto izquierdo -->
+
+          <!-- seccion formulario derecho -->
+          <div class="col-12 col-lg-6">
+            <h3>Registro de usuarios</h3>
+            <hr>
+            <form name="regform">
+              <!-- ingreso de correo electronico -->
+              <div class="form-group">
+                <label for="correoreg">Correo electrónico</label>
+                <input class="form-control" name="correoreg" id="correoreg" type="email" placeholder="Correo electrónico" />
+                <strong><div id="mensaje1" class="text-danger"></div></strong>
+              </div>
+              <!-- fin ingreso de correo electronico -->
+
+              <!-- ingreso de contraseña -->
+              <div class="form-group">
+                <label for="passreg">contraseña</label>
+                <input class="form-control" name="passreg" id="passreg" type="password" placeholder="Contraseña">
+                <strong><div id="mensaje2" class="text-danger"></div></strong>
+              </div>
+              <!-- finingreso de contraseña -->
+
+              <!-- ingreso de repita contraseña -->
+              <div class="form-group">
+                <label for="repreg">Repita la Contraseña</label>
+                <input class="form-control" name="repreg" id="repreg" type="password" placeholder="Repita contraseña">
+                <strong><div id="mensaje3" class="text-danger"></div></strong>
+              </div>
+              <!-- fin ingreso de repita contraseña -->
+
+              <!-- seccion selector de opcion de genero musical -->
+              <div class="form-group">
+                <label for="genero">Genero Musical Preferido</label>
+                <select name="generoreg" id="generoreg" class="form-control">
+                  <option value="">Elija su opción</option>
+                  <option value="rock">Rock</option>
+                  <option value="rock">Pop</option>
+                  <option value="rock">Clásico</option>
+                  <option value="rock">Romantico</option>
+                  <option value="rock">Techno</option>
+                </select>
+                <strong><div id="mensaje4" class="text-danger"></div></strong>
+              </div>
+              <!-- fin seccion selector de opcion de genero musical -->
+
+              <!-- check box de edad usuario -->
+              <fieldset class="form-group">  
+                <legend class="col-form-label">Edad</legend>
+                <div class="form-check">
+                  <input
+                    class="form-check-input" 
+                    type="radio" 
+                    name="edadreg"
+                    id="19"
+                    value="1"
+                    >
+                  <label for="19" class="from-check-label">Menor de 20</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input" 
+                    type="radio" 
+                    name="edadreg"
+                    id="20"
+                    value="2"
+                    >
+                  <label for="20" class="from-check-label">20 a 40</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input" 
+                    type="radio" 
+                    name="edadreg"
+                    id="50"
+                    value="3"
+                    >
+                  <label for="50" class="from-check-label">Mayor a 50</label>
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <strong><div id="mensaje5" class="text-danger"></div></strong>
+              </div>
+              <!-- check box de edad usuario -->
+
+              <!-- teminos de uso -->
+              <div class="form-group">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="aceptoreg" name="aceptoreg">
+                  <label for="aceptoreg">Acepto los terminos</label>
+                  <strong><div id="mensaje6" class="text-danger"></div></strong>
+                </div>
+              </div>
+              <!-- fin teminos de uso -->
+
+              <!-- informacion -->
+              <div class="form-group">
+                <p class="text-primary"><strong>*Todos los Campos son obligatorios</strong></p>
+              </div>
+              <!-- fin informacion -->
+
+              <!-- boton validamos registro -->
+              <div class="form-group">
+                <input type="submit" value="Registrar" class="btn btn-success" onclick="return validaregistro(this.form)">
+              </div>
+              <!-- fin boton validamos registro -->
+            </form>
+          </div>
+          <!-- fin seccion formulario derecho -->
+        </div>
+
+      </div>
+      
+    </section>
+
+    <!-- pie de pagina -->
+    <footer class="bg-primary font-white text-white py-2 fixed-bottom">
+      <div class="container">
+        <div class="row">
+        <div class="d-none d-sm-none d-lg-block col-lg-9"><h5>Comparte la música</h5></div>
+        <div class="col-sm-12 col-lg-3 text-center"><h5>Derechos reservados</h5></div>
+      </div>  
+      </div>
+    </footer>
+    <!-- fin pie de pagina -->
+
+    <!-- ventana modal registro exitoso -->
+    <div class="modal" tabindex="-1" role="dialog" id="ventanaexito">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitulo"></h5>
+            <button type="button" class="close" data-dismiss="modal">X</button>
+          </div>
+          <div class="modal-body">
+            <p id="modalMensaje1"></p>
+            <p id="modalMensaje2"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="bt btn-primary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ventana modal registro exitoso -->
+
+    <!-- cargamos los archivos js que se adjuntan en el html -->
+    <!-- cdn jquery con ajax -->
+    <script src="dist/js/jquery-3.5.1.slim.min.js"></script>
+    <!-- bootstrap 4 js -->
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- archivo js con validaciones -->
+    <script src="dist/js/funciones.min.js"></script>
+  </body>
+</html>

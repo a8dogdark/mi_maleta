@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="El mejor sitio de música para tus oidos - canciones" />
+    <meta name="keywords" content="musica, pop, rock, mp3, wav" />
+    <meta name="author" content="Sergio Marchant" />
+    <meta name="copyright" content="Sergio Marchant by Dogdark" />
+    <meta name="robots" content="index" />
+    <!-- Hojas de estilos anexas -->
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="dist/css/estilo.css" />
+
+    <!-- favicon del sitio -->
+    <link rel="shorcut icon" href="dist/imagenes/icon_1.svg">
+    <title>Listado Canciones</title>
+  </head>
+  <body>
+    <!-- menu de navegacion responsive -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-orange bg-orange">
+        <!-- logo y texto de la web -->
+        <a class="navbar-brand" href="index.html">
+          <img src="dist/imagenes/logo.png" width="50" height="50" alt="" id="imglogo">OYE
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#MenuPrincipal" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- fin logo y texto de la web -->
+
+
+        <div id="MenuPrincipal" class="collapse navbar-collapse">
+          <!-- menu con redireciones a otras secciones -->
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="canciones.html">Canciones</a>
+            </li>
+          </ul>
+          <!-- fin menu con redireciones a otras secciones -->
+
+          <div class="form-inline">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <!-- boton de contacto que desplega una ventana modal con los datos -->
+                <button type="button" class="btn btn-primary nav-link mb-1 mr-lg-2 px-4" data-toggle="modal" data-target="#ventanacontacto">Contacto</button>
+
+                <!-- ventana modal con los datos de contacto  -->
+                <div class="modal" tabindex="-1" role="dialog" id="ventanacontacto">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title">Contactame</h5>
+                        <button type="button" class="close" data-dismiss="modal">X</button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Si necesitas contactar con nuestro equipo, lo puedes realizar a través de nuestros canales.</p>
+                        <p>Email : info@oye.com</p>
+                        <p class="text-primary">Fono : +1 123 123123123</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="bt btn-primary" data-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- fin ventana modal -->
+              </li>
+              <li class="nav-item">
+                <a href="session.html" class="nav-link btn btn-primary mb-1 mr-lg-2 px-4">Inicio Session</a>
+              </li>
+              <li class="nav-item">
+                <a href="registro.html" class="nav-link btn btn-primary mr-lg-2 px-4">Registro</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+    <!-- fin menu de navegacion responsive -->
+
+    <!-- seccion con el listado de las canciones con buscador -->
+    <section class="my-4">
+      <div class="container bg-light rounded py-3">
+          <h1>Canciones</h1>
+            <!-- campo input busqueda -->
+            <input 
+              type="search" 
+              name="search" 
+              id="search" 
+              class="form-control my-3" 
+              placeholder="Buscar"
+              />
+          <!--  seccion donde mostramos todo el listado de las canciones
+                en nuestro repositorio JSON -->
+          <div class="row" id="temas">
+          </div>
+          <!--  fin seccion donde mostramos todo el listado de las canciones
+                en nuestro repositorio JSON -->
+      </div>
+    </section>
+    <!-- fin seccion con el listado de las canciones con buscador -->
+
+    <!-- footer pie de página -->
+    <footer class="bg-primary font-white text-white py-2 fixed-bottom">
+      <div class="container">
+        <div class="row">
+        <div class="d-none d-sm-none d-lg-block col-lg-9"><h5>Comparte la música</h5></div>
+        <div class="col-sm-12 col-lg-3 text-center"><h5>Derechos reservados</h5></div>
+      </div>  
+      </div>
+    </footer>
+    <!-- footer pie de página -->
+
+    <!-- cargamos los archivos js que se adjuntan en el html -->
+    <!-- cdn jquery con ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <!-- bootstrap 4 .js -->
+    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- funcion lista y busca canciones y las pasa al dom -->
+    <script src="dist/js/canciones.min.js"></script>
+    <!-- cargamos los archivos js que se adjuntan en el html -->
+    <!-- cdn jquery con ajax -->
+  </body>
+</html>

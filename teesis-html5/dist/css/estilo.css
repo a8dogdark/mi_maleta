@@ -1,0 +1,16 @@
+body{
+    background-image: url(../imagenes/fondo.svg);
+    background-attachment: fixed;
+    background-color: black;
+    margin-bottom: 80px;
+}
+#imglogo{
+    margin-right: 5px;
+}
+audio{
+    width: 100%;
+}
+.bloqueof{
+    display: none;
+}
+/*# sourceMappingURL=estilo.css.map */
